@@ -35,7 +35,7 @@ router.get("/", async (req, res, next) => {
     });
 
     if (posts) {
-      res.json(posts);
+      res.json({ posts: posts });
     }
   } catch (err) {
     next(err);
