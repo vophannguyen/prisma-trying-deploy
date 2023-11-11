@@ -1,9 +1,10 @@
 require("dotenv").config();
+const serverless = require("serverless-http");
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
 const path = require("path");
-module.exports = app;
+module.exports.handler = serverless(app);
 
 app.use(morgan("dev"));
 app.use(express.json());
