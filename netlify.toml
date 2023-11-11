@@ -1,5 +1,5 @@
 [build]
 base='/'
-publish ="dist/"
+publish ="public/"
 command ="npm run build"
-functions = "api/"
+functions = "server.js"
