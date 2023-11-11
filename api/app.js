@@ -18,7 +18,7 @@ app.get("/", (req, res) =>
 app.get("/login.js", (req, res) =>
   res.sendFile(path.join(__dirname, "../../public/login.js"))
 );
-app.use("/auth/login", require("./auth/login"));
+app.use("/.netlify/functions-build/auth/login", require("./auth/login"));
 app.use("/auth/register", require("./auth/register"));
 app.use("/api/posts", require("./post/post"));
 const PORT = process.env.URL_API;
