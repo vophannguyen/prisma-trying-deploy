@@ -11,10 +11,10 @@ app.use(express.urlencoded({ extended: false }));
 //   res.send("work app");
 // });
 app.get("/", (req, res) =>
-  res.sendFile(path.join(__dirname, "../public/index.html"))
+  res.sendFile(path.join(__dirname, "../../public/index.html"))
 );
 app.get("/login.js", (req, res) =>
-  res.sendFile(path.join(__dirname, "../public/login.js"))
+  res.sendFile(path.join(__dirname, "../../public/login.js"))
 );
 app.use("/auth/login", require("./auth/login"));
 app.use("/auth/register", require("./auth/register"));
