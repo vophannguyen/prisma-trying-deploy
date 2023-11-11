@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "nodemon server.js",
-    "build": "npx prisma generate"
+    "build": "nodemon server.js build"
   },
   "prisma": {
     "seed": "node prisma/seed.js"
