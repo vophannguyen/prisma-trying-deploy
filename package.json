@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "npx prisma generate && nodemon api/app.js",
-    "build": "prisma generate && node build api"
+    "build": "prisma generate && ./node_modules/.bin/netlify-lambda build api"
   },
   "prisma": {
     "seed": "node prisma/seed.js"
