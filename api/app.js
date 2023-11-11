@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
@@ -19,3 +20,5 @@ app.get("/login.js", (req, res) =>
 app.use("/auth/login", require("./auth/login"));
 app.use("/auth/register", require("./auth/register"));
 app.use("/api/posts", require("./post/post"));
+const PORT = process.env.URL_API;
+app.listen(PORT, () => `Listen ${PORT}`);

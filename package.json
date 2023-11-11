@@ -12,7 +12,7 @@
     "serverless-http": "^3.2.0"
   },
   "scripts": {
-    "start": "npx prisma generate && nodemon server.js",
+    "start": "npx prisma generate && nodemon api/app.js",
     "build": "prisma generate"
   },
   "prisma": {

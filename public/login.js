@@ -45,10 +45,7 @@ const App = () => {
   // It takes a username and password.
   const signIn = async (credentials) => {
     // POST /api/auth means "sign me in"
-    let { data } = await axios.post(
-      "https://fastidious-moonbeam-714c52.netlify.app/auth/login",
-      credentials
-    );
+    let { data } = await axios.post("/auth/login", credentials);
     // It returns a "token" which is proof that we are successfully logged in.
     console.log(data.token);
     attemptTokenLogin(data.token);
