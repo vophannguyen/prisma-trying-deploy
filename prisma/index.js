@@ -1,4 +1,4 @@
-const { PrismaClient } = require("@prisma/client");
+const { PrismaClient } = require("../src/generated/client");
 const bcrypt = require("bcrypt");
 const prisma = new PrismaClient().$extends({
   query: {
